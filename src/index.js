@@ -35,7 +35,7 @@ export default class Screen extends React.Component {
               <InputCompo label="University" placeholder="NA"/>
 
             </View>
-            <View style={styles.formContainer}>
+            <View style={styles.fullWidth}>
               <Button
                 backgroundColor="blue"
                 raised
@@ -48,8 +48,6 @@ export default class Screen extends React.Component {
               </View>
         </View>
       </View>
-            <View style={{ height: 100 }} />
-
         </KeyboardAvoidingView>
     );
   }
@@ -57,10 +55,8 @@ export default class Screen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    height: 200
   },
   keyboardContainer: {
     alignItems: 'center',
@@ -73,9 +69,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   formContainer: {
-    margin: 5,
+    marginBottom: 5,
     padding: 5,
-    width: '90%',
   },
-
+  fullWidth: {
+    width: '100%',
+    marginBottom: 70
+  }
 });
