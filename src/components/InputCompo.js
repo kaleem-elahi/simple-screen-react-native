@@ -9,8 +9,8 @@ export default class InputCompo extends React.Component {
   render() {
     return (
       <View >
-      <FormLabel labelStyle={{textAlign: 'left'}}>{this.props.label}</FormLabel>
-        <FormInput inputStyle={{ ...styles.inputStyle, width: 380}}/>
+      <FormLabel labelStyle={{textAlign: 'left'}} htmlFor={this.props.label}>{this.props.label}</FormLabel>
+        <FormInput style={{ ...styles.inputStyle}} id={this.props.label} placeholder={this.props.placeholder}/>
 
       </View>
     );
@@ -20,6 +20,7 @@ export default class InputCompo extends React.Component {
 const styles = StyleSheet.create({
     inputStyle: {
       borderBottomColor: 'grey',
-      backgroundColor: '#eee',
+      borderBottomWidth: 1,
+      width: '90%'
     },
 });

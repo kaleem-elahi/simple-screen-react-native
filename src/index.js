@@ -18,30 +18,34 @@ export default class Screen extends React.Component {
     return (
       <KeyboardAvoidingView style={styles.keyboardContainer} behavior="padding" enabled>
       <View>
-      <View style={styles.avatarContainer}>
-        <Avatar
-          xlarge
-          rounded
-          source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
-          onPress={() => console.log("Works!")}
-          activeOpacity={0.7}
-        />
+        <View style={styles.avatarContainer}>
+          <Avatar
+            xlarge
+            rounded
+            source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
+            activeOpacity={0.7}
+          />
         </View>
         <View style={styles.container}>
 
             <View style={styles.formContainer}>
-              <InputCompo label="Name" />
-              <InputCompo label="Office Location" />
-              <InputCompo label="Department" />
-              <InputCompo label="University" />
+              <InputCompo label="Name" placeholder="Teacher" />
+              <InputCompo label="Office Location" placeholder="New york"/>
+              <InputCompo label="Department" placeholder="Computer Science"/>
+              <InputCompo label="University" placeholder="NA"/>
 
             </View>
+            <View style={styles.formContainer}>
               <Button
-              backgroundColor="blue"
-
-              raised
-              icon={{name: 'cached'}}
-              title='BUTTON WITH ICON' />
+                backgroundColor="blue"
+                raised
+                buttonStyle={{
+                  width: '100%'
+                }}
+                icon={{name: 'cached'}}
+                title='Update'
+              />
+              </View>
         </View>
       </View>
             <View style={{ height: 100 }} />
@@ -54,7 +58,6 @@ export default class Screen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     height: 200
@@ -66,13 +69,13 @@ const styles = StyleSheet.create({
   },
   avatarContainer: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   formContainer: {
-    backgroundColor: '#fff',
-    margin: 15
+    margin: 5,
+    padding: 5,
+    width: '90%',
   },
 
 });
